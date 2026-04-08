@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -116,17 +117,48 @@
       padding: 1rem;
       border-radius: 8px;
     }
-    .gallery img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      object-fit: cover;
-    }
+    /* Nouveau style pour la galerie média */
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1rem;
+      background: white;
       margin-top: 2rem;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .media-item {
+      background: var(--bg);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .media-item img, .media-item iframe {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+    .media-item iframe {
+      border: none;
+    }
+    .media-caption {
+      padding: 0.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--main);
+      font-weight: 500;
+    }
+    .subtitle {
+      margin: 1rem 0 0.5rem;
+      color: var(--accent);
+      font-weight: 600;
+      border-left: 4px solid var(--accent);
+      padding-left: 1rem;
     }
     form {
       display: flex;
@@ -185,11 +217,37 @@
     </div>
   </section>
 
+  <!-- SECTION RÉALISATIONS (QATAR) MODIFIÉE -->
   <section class="gallery" id="gallery">
-    <h3 data-fr="Nos Réalisations" data-en="Our Projects"></h3>
-    <img src="https://images.unsplash.com/photo-1616627989028-7e46de7a2a42?auto=format&fit=crop&w=800&q=80" alt="Epoxy floor Qatar">
-    <img src="https://images.unsplash.com/photo-1594495894542-7c4b91a708c5?auto=format&fit=crop&w=800&q=80" alt="Garage floor">
-    <img src="https://images.unsplash.com/photo-1616627564733-9ebc7762ddbe?auto=format&fit=crop&w=800&q=80" alt="Industrial floor">
+    <h3 data-fr="Nos Réalisations au Qatar" data-en="Our Projects in Qatar"></h3>
+    
+    <!-- Photos -->
+    <div class="subtitle" data-fr="📸 Nos photos" data-en="📸 Photos"></div>
+    <div class="media-grid">
+      <!-- Liens ImgBB convertis en liens directs (supposition .jpg) -->
+      <div class="media-item"><img src="https://i.ibb.co/vCT97Vq2.jpg" alt="Réalisation Qatar 1"><div class="media-caption">Sol époxy – Villa</div></div>
+      <div class="media-item"><img src="https://i.ibb.co/Y76H1cyT.jpg" alt="Réalisation Qatar 2"><div class="media-caption">Revêtement garage</div></div>
+      <div class="media-item"><img src="https://i.ibb.co/bRzYXtrT.jpg" alt="Réalisation Qatar 3"><div class="media-caption">Application industrielle</div></div>
+      <div class="media-item"><img src="https://i.ibb.co/84YtX8kF.jpg" alt="Réalisation Qatar 4"><div class="media-caption">Finition haute brillance</div></div>
+      <div class="media-item"><img src="https://i.ibb.co/F4PmBKWT.jpg" alt="Réalisation Qatar 5"><div class="media-caption">Résine décorative</div></div>
+      <div class="media-item"><img src="https://i.ibb.co/8Lfg1Wnv.jpg" alt="Réalisation Qatar 6"><div class="media-caption">Atelier mécanique</div></div>
+      <div class="media-item"><img src="https://i.ibb.co/93CRLC2M.jpg" alt="Réalisation Qatar 7"><div class="media-caption">Showroom</div></div>
+      <div class="media-item"><img src="https://i.ibb.co/rKcnzKLs.jpg" alt="Réalisation Qatar 8"><div class="media-caption">Terrasse extérieure</div></div>
+      <div class="media-item"><img src="https://i.ibb.co/TBJFfZ3H.jpg" alt="Réalisation Qatar 9"><div class="media-caption">Parking résidentiel</div></div>
+    </div>
+
+    <!-- Vidéos Streamable (intégration iframe) -->
+    <div class="subtitle" data-fr="🎥 Nos vidéos" data-en="🎥 Videos"></div>
+    <div class="media-grid">
+      <div class="media-item"><iframe src="https://streamable.com/e/3x6gai" frameborder="0" allowfullscreen></iframe><div class="media-caption">Application epoxy</div></div>
+      <div class="media-item"><iframe src="https://streamable.com/e/e0x0co" frameborder="0" allowfullscreen></iframe><div class="media-caption">Mélange et préparation</div></div>
+      <div class="media-item"><iframe src="https://streamable.com/e/enqhq3" frameborder="0" allowfullscreen></iframe><div class="media-caption">Pose au rouleau</div></div>
+      <div class="media-item"><iframe src="https://streamable.com/e/muoixw" frameborder="0" allowfullscreen></iframe><div class="media-caption">Résultat final</div></div>
+      <div class="media-item"><iframe src="https://streamable.com/e/fmeqxj" frameborder="0" allowfullscreen></iframe><div class="media-caption">Rénovation de sol</div></div>
+      <div class="media-item"><iframe src="https://streamable.com/e/e54hao" frameborder="0" allowfullscreen></iframe><div class="media-caption">Nettoyage avant pose</div></div>
+      <div class="media-item"><iframe src="https://streamable.com/e/w7g71u" frameborder="0" allowfullscreen></iframe><div class="media-caption">Test d'adhérence</div></div>
+      <div class="media-item"><iframe src="https://streamable.com/e/zy5qb7" frameborder="0" allowfullscreen></iframe><div class="media-caption">Travaux au Qatar</div></div>
+    </div>
   </section>
 
   <section class="about" id="about">
@@ -232,3 +290,4 @@
   </script>
 </body>
 </html>
+```
